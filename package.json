@@ -1,0 +1,42 @@
+{
+  "name": "mono-repo-template",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "npm@10.5.2",
+  "description": "My mono repo template",
+  "keywords": [],
+  "homepage": "https://www.richdevelops.dev/",
+  "bugs": {
+    "url": "https://github.com/buggy/mono-repo/issues"
+  },
+  "license": "MIT",
+  "author": "Rich Buggy<rich@buggy.id.au>",
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://github.com/sponsors/buggy"
+    }
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buggy/mono-repo"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "pretty": "prettier . --write",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.3.3",
+    "turbo": "^2.2.3"
+  }
+}
